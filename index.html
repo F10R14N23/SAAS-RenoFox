@@ -1,44 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
+<!-- HEAD -->
 
+<head>
+    <!-- Charset & viewport -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RenoFox – Rénover plus simplement</title>
+    <!-- Theme & color -->
+    <meta name="theme-color" content="#2B655B">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Sécurité -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   img-src 'self' https: data:;
+                   style-src 'self' 'unsafe-inline';
+                   font-src 'self' https: data:;
+                   script-src 'self' https://www.googletagmanager.com;">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Permissions-Policy"
+          content="geolocation=(), camera=(), microphone=()">
+
+    <!-- SEO -->
+    <title>RenoFox – Aides à la rénovation, artisans & impact écologique</title>
     <meta name="description"
-          content="Trouvez un professionnel, estimez vos aides,
-          découvrez l’impact écologique de vos travaux et rénovez votre logement en toute simplicité avec RenoFox.">
-
+          content="RenoFox vous aide à trouver un artisan, estimer vos aides à la rénovation et réduire l’impact écologique de vos travaux. Simple et gratuit.">
     <link rel="canonical" href="https://www.renofox.fr/">
+    <link rel="alternate" hreflang="fr" href="https://www.renofox.fr/">
+    <meta name="geo.region" content="FR">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="RenoFox">
+    <meta name="contact" content="contact@renofox.fr">
 
-    <meta property="og:title" content="RenoFox – Rénover plus simplement">
-    <meta property="og:description"
-          content="Trouvez un professionnel, estimez vos aides et découvrez l’impact écologique de vos travaux.">
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.renofox.fr/">
+    <meta property="og:title" content="RenoFox – Aides à la rénovation & écologie">
+    <meta property="og:description"
+          content="Trouvez un artisan, estimez vos aides et optimisez l’impact écologique de votre rénovation.">
     <meta property="og:image" content="https://www.renofox.fr/media/preview-renofox.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RenoFox – Rénover plus simplement">
+    <meta name="twitter:title" content="RenoFox – Aides à la rénovation & écologie">
     <meta name="twitter:description"
-          content="Trouvez un professionnel, calculez vos aides et optimisez votre rénovation.">
+          content="Trouvez un artisan, estimez vos aides et optimisez l’impact écologique de votre rénovation.">
     <meta name="twitter:image" content="https://www.renofox.fr/media/preview-renofox.jpg">
 
-    <meta name="theme-color" content="#2B655B">
+    <!-- Icons & PWA -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="Image/logo-renofox.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="Image/logo-renofox.png">
 
-    <link rel="icon" type="image/png" href="Image/Logo-sans fond.png" sizes="192x192">
-    <link rel="apple-touch-icon" href="Image/Logo-sans fond.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="RenoFox">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload police principale -->
+    <link rel="preload"
+          href="/fonts/inter-var.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
 
     <link rel="preload" href="index.css" as="style">
-    <link rel="preload" href="Image/Logo-sans fond.png" as="image">
+    <link rel="preload"
+          href="Image/Reno_moderne_Acceuil.webp"
+          as="image"
+          fetchpriority="high">
+
     <link rel="stylesheet" href="index.css">
 
-    <!-- Défense XSS (sécurité) -->
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline';
-          font-src 'self' https: data:;">
+    <!-- Analytics (minimal, SAAS-ready) -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX', {anonymize_ip: true});
+    </script>
+
+    <!-- Données structurées -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "RenoFox",
+            "url": "https://www.renofox.fr",
+            "logo": "https://www.renofox.fr/media/logo.png",
+            "sameAs": [
+                "https://www.linkedin.com/company/renofox",
+                "https://twitter.com/renofox"
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "RenoFox",
+            "url": "https://www.renofox.fr",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.renofox.fr/recherche?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Mise en relation artisans et particuliers",
+            "provider": {
+                "@type": "Organization",
+                "name": "RenoFox"
+            },
+            "areaServed": "FR",
+            "serviceType": "Rénovation énergétique",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+            }
+        }
+    </script>
+
+    <!-- FAQ Schema (SEO boost) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "RenoFox est-il gratuit ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Oui, RenoFox est entièrement gratuit pour les particuliers."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Comment trouver un artisan sur RenoFox ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "RenoFox vous met en relation avec des artisans qualifiés en fonction de votre projet de rénovation."
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 
@@ -47,7 +177,7 @@
     <section>
         <div>
             <a href="#Footer">
-                <img src="Image/Logo-sans fond.png" alt="Logo RenoFox" height="100" width="auto">
+                <img src="Image/logo-renofox.png" alt="Logo RenoFox" height="100" width="auto">
             </a>
         </div>
         <nav aria-label="Navigation du site">
@@ -60,7 +190,7 @@
         </nav>
         <nav aria-label="Espace utilisateur">
             <a href="Connexion.html" target="_blank" rel="noopener noreferrer">Connexion</a>
-            <a href="Saas.html" target="_blank" rel="noopener noreferrer">Démarrer</a>
+            <a href="Choice1.html" target="_blank" rel="noopener noreferrer">Démarrer</a>
         </nav>
 
     </section>
@@ -270,6 +400,77 @@
 
     <!-- Block 3 -->
 
+    <article>
+
+        <div>
+            <h2>Financez votre rénovation avec les aides de l'État </h2>
+            <p>Profitez de nombreuses aides financières pour réduire le coût de votre rénovation. Notre outil
+                intelligent calcule automatiquement votre éligibilité et le montant exact des aides.</p>
+        </div>
+
+        <section>
+            <header>
+                <figure>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </figure>
+
+                <div>
+                    <h3>MaPrimeRénov'</h3>
+                    <dl>
+                        <dt>Montant maximal de l'aide</dt>
+                        <dd>Jusqu'à 20 000€</dd>
+                    </dl>
+                </div>
+            </header>
+
+            <section>
+                <p>Aide de l'État pour la rénovation énergétique de votre logement.</p>
+                <ul>
+                    <li>Propriétaires occupants ou bailleurs</li>
+                </ul>
+            </section>
+        </section>
+
+        <div>
+            <h2>Financez votre rénovation avec les aides de l'État </h2>
+            <p>Profitez de nombreuses aides financières pour réduire le coût de votre rénovation. Notre outil
+                intelligent calcule automatiquement votre éligibilité et le montant exact des aides.</p>
+        </div>
+
+        <section>
+            <header>
+                <figure>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-zap w-6 h-6 text-white" aria-hidden="true">
+                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0
+                            1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                    </svg>
+                </figure>
+
+                <div>
+                    <h3>CEE (Certificats d'Économies d'Énergie)</h3>
+                    <dl>
+                        <dt>Montant maximal de l'aide</dt>
+                        <dd>Jusqu'à 5 000€</dd>
+                    </dl>
+                </div>
+            </header>
+
+            <section>
+                <p>Prime versée par les fournisseurs d'énergie</p>
+                <ul>
+                    <li>Propriétaires occupants ou bailleurs</li>
+                </ul>
+            </section>
+        </section>
+
+    </article>
+
 
     <!-- Block 4 -->
 
@@ -313,7 +514,7 @@
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                  class="lucide lucide-zap w-6 h-6 text-white" aria-hidden="true">
                 <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0
-            1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
             </svg>
             <h3>-40%</h3>
             <p>Consommation d'énergie</p>
@@ -465,7 +666,8 @@
         </nav>
 
         <figure>
-            <img src="Image/Immeuble_ecologique_2.webp" alt="Immeuble éco responsable illustrant une rénovation durable">
+            <img src="Image/Immeuble_ecologique_2.webp"
+                 alt="Immeuble éco responsable illustrant une rénovation durable">
         </figure>
     </article>
 
@@ -475,7 +677,7 @@
 <footer aria-label="Pied de page du site" role="contentinfo">
     <section aria-label="Informations principales du footer">
         <div>
-            <img src="Image/Logo-sans fond.png" alt="Logo RenoFox" height="100" width="auto">
+            <img src="Image/logo-renofox.png" alt="Logo RenoFox" height="100" width="auto">
             <nav aria-label="Réseaux sociaux">
                 <ul>
                     <li>
