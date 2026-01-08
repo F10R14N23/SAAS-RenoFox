@@ -4,38 +4,55 @@
 <!-- HEAD -->
 
 <head>
-    <!-- Charset & viewport -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============================================================= -->
+    <!-- CHARSET & VIEWPORT : définir l'encodage et le comportement responsive -->
+    <!-- ============================================================= -->
+    <meta charset="UTF-8"> <!-- Encodage UTF-8 pour supporter tous les caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive : largeur = device, zoom initial = 1 -->
 
-    <!-- Theme & color -->
-    <meta name="theme-color" content="#2B655B">
-    <meta name="color-scheme" content="light dark">
+    <!-- ============================================================= -->
+    <!-- THEME & COLOR SCHEME : personnalisation couleur barre navigateur & dark/light mode -->
+    <!-- ============================================================= -->
+    <meta name="theme-color" content="#2B655B"> <!-- Couleur barre navigateur sur mobile -->
+    <meta name="color-scheme" content="light dark"> <!-- Support dark mode et light mode automatiquement -->
 
-    <!-- Sécurité -->
+    <!-- ============================================================= -->
+    <!-- SÉCURITÉ : Content Security, Referrer Policy, Permissions -->
+    <!-- ============================================================= -->
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self';
                    img-src 'self' https: data:;
                    style-src 'self' 'unsafe-inline';
                    font-src 'self' https: data:;
                    script-src 'self' https://www.googletagmanager.com;">
+    <!-- Empêche le chargement de ressources non autorisées et limite les injections malveillantes -->
+
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <!-- Contrôle les informations envoyées dans le header Referer pour la vie privée -->
+
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- Empêche le navigateur de détecter automatiquement le type MIME et d’exécuter du contenu malveillant -->
+
     <meta http-equiv="Permissions-Policy"
           content="geolocation=(), camera=(), microphone=()">
+    <!-- Bloque l’accès par défaut aux capteurs sensibles -->
 
-    <!-- SEO -->
+    <!-- ============================================================= -->
+    <!-- SEO : titres, description, canonique et métadonnées -->
+    <!-- ============================================================= -->
     <title>RenoFox – Aides à la rénovation, artisans & impact écologique</title>
     <meta name="description"
           content="RenoFox vous aide à trouver un artisan, estimer vos aides à la rénovation et réduire l’impact écologique de vos travaux. Simple et gratuit.">
-    <link rel="canonical" href="https://www.renofox.fr/">
-    <link rel="alternate" hreflang="fr" href="https://www.renofox.fr/">
-    <meta name="geo.region" content="FR">
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.renofox.fr/"> <!-- URL principale pour éviter le contenu dupliqué -->
+    <link rel="alternate" hreflang="fr" href="https://www.renofox.fr/"> <!-- Version française -->
+    <meta name="geo.region" content="FR"> <!-- Géolocalisation pour SEO local -->
+    <meta name="robots" content="index, follow, max-image-preview:large"> <!-- Indexation des pages et images -->
     <meta name="author" content="RenoFox">
     <meta name="contact" content="contact@renofox.fr">
 
-    <!-- Open Graph -->
+    <!-- ============================================================= -->
+    <!-- OPEN GRAPH : partage sur réseaux sociaux -->
+    <!-- ============================================================= -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.renofox.fr/">
     <meta property="og:title" content="RenoFox – Aides à la rénovation & écologie">
@@ -46,44 +63,51 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
 
-    <!-- Twitter -->
+    <!-- ============================================================= -->
+    <!-- TWITTER CARD : affichage sur Twitter -->
+    <!-- ============================================================= -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RenoFox – Aides à la rénovation & écologie">
     <meta name="twitter:description"
           content="Trouvez un artisan, estimez vos aides et optimisez l’impact écologique de votre rénovation.">
     <meta name="twitter:image" content="https://www.renofox.fr/media/preview-renofox.jpg">
 
-    <!-- Icons & PWA -->
+    <!-- ============================================================= -->
+    <!-- ICONS & PWA : favicon, apple touch icon, manifest pour PWA -->
+    <!-- ============================================================= -->
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" href="Image/logo-renofox.png" sizes="192x192">
     <link rel="apple-touch-icon" href="Image/logo-renofox.png">
 
     <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Permet le mode web app sur iOS -->
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="RenoFox">
 
-    <!-- Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- ============================================================= -->
+    <!-- PERFORMANCE : préconnect & preload fonts, CSS et images -->
+    <!-- ============================================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Optimise le chargement des fonts Google -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Preload police principale -->
     <link rel="preload"
           href="/fonts/inter-var.woff2"
           as="font"
           type="font/woff2"
-          crossorigin>
+          crossorigin> <!-- Précharge la font principale pour réduire le FOUT -->
 
-    <link rel="preload" href="index.css" as="style">
+    <link rel="preload" href="index.css" as="style"> <!-- Précharge CSS critique -->
     <link rel="preload"
           href="Image/Reno_moderne_Acceuil.webp"
           as="image"
-          fetchpriority="high">
+          fetchpriority="high"> <!-- Priorité pour image hero -->
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"> <!-- CSS principal -->
 
-    <!-- Analytics (minimal, SAAS-ready) -->
+    <!-- ============================================================= -->
+    <!-- ANALYTICS : Google Analytics / GTAG minimal -->
+    <!-- ============================================================= -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];
@@ -93,10 +117,12 @@
         }
 
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXX', {anonymize_ip: true});
+        gtag('config', 'G-XXXXXXX', {anonymize_ip: true}); <!-- Anonymisation IP pour RGPD -->
     </script>
 
-    <!-- Données structurées -->
+    <!-- ============================================================= -->
+    <!-- DONNÉES STRUCTURÉES : JSON-LD pour SEO (Organisation, WebSite, Service, FAQ) -->
+    <!-- ============================================================= -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -144,7 +170,6 @@
         }
     </script>
 
-    <!-- FAQ Schema (SEO boost) -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -170,6 +195,7 @@
         }
     </script>
 </head>
+
 
 
 <body>
@@ -398,7 +424,7 @@
 
     </article>
 
-    <!-- Block 3 -->
+    <!-- Block 3 (à finir) -->
 
     <article>
 
@@ -578,6 +604,266 @@
 
     <!-- Block 5 -->
 
+    <article>
+        <div>
+            <h1>Ils ont transformé leur
+                <pan>habitat</pan>
+            </h1>
+            <p>Découvrez les témoignages de nos clients satisfaits qui ont réalisé leur
+                projet de rénovation avec RenoFox</p>
+        </div>
+        <section>
+            <div>
+                <h2>
+                    4.9/5
+                </h2>
+                <p>Note moyenne</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-star w-4 h-4 fill-emerald-500 text-emerald-500" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-star w-4 h-4 fill-emerald-500 text-emerald-500" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-star w-4 h-4 fill-emerald-500 text-emerald-500" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-star w-4 h-4 fill-emerald-500 text-emerald-500" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-star w-4 h-4 fill-emerald-500 text-emerald-500" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+            </div>
+            <div>
+                <h2>
+                    15 000+
+                </h2>
+                <p>Projets réalisés</p>
+            </div>
+            <div>
+                <h2>
+                    98%
+                </h2>
+                <p>Clients satisfaits</p>
+            </div>
+            <div>
+                <h2>
+                    3 500+
+                </h2>
+                <p>Professionnels</p>
+            </div>
+        </section>
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 relative group">
+
+                <button id="prevBtn"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 bg-white border border-gray-200 p-3 rounded-full shadow-lg hover:bg-gray-50 transition-all opacity-0 group-hover:opacity-100 hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="text-gray-600">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <button id="nextBtn"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 bg-white border border-gray-200 p-3 rounded-full shadow-lg hover:bg-gray-50 transition-all opacity-0 group-hover:opacity-100 hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="text-gray-600">
+                        <path d="m9 18 6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <div id="testimonialSlider"
+                     class="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4">
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white border border-gray-100 rounded-xl p-8 shadow-sm flex flex-col h-full">
+                        <div class="flex gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-700 text-[15px] leading-relaxed mb-10 flex-grow">
+                            Grâce à RenoFox, j'ai pu rénover entièrement mon appartement tout en bénéficiant de <strong>12
+                            000€ d'aides</strong> que je ne connaissais même pas. Le professionnel trouvé était
+                            exceptionnel !
+                        </p>
+
+                        <div class="border-t border-gray-50 pt-6 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marie"
+                                     class="w-10 h-10 rounded-full bg-gray-100" height="50" width="auto" alt="Avatar">
+                                <div>
+                                    <p class="font-bold text-gray-900 text-sm">Marie Dubois</p>
+                                    <p class="text-xs text-gray-500 font-medium">Propriétaire à Paris</p>
+                                </div>
+                            </div>
+                            <span class="bg-[#ecfdf5] text-[#10b981] px-3 py-1.5 rounded-lg text-[11px] font-bold">
+            12 000€ d'aides
+          </span>
+                        </div>
+                    </div>
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white border border-gray-100 rounded-xl p-8 shadow-sm flex flex-col h-full">
+                        <div class="flex gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-[15px] leading-relaxed mb-10 flex-grow">
+                            Le calculateur d'impact écologique m'a vraiment aidé à faire les bons choix. Ma facture
+                            énergétique a baissé de <strong>45%</strong> et je participe à la préservation.
+                        </p>
+                        <div class="border-t border-gray-50 pt-6 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Thomas"
+                                     class="w-10 h-10 rounded-full bg-gray-100" height="50" width="auto" alt="Avatar">
+                                <div>
+                                    <p class="font-bold text-gray-900 text-sm">Thomas Martin</p>
+                                    <p class="text-xs text-gray-500 font-medium">Propriétaire à Lyon</p>
+                                </div>
+                            </div>
+                            <span class="bg-[#ecfdf5] text-[#10b981] px-3 py-1.5 rounded-lg text-[11px] font-bold">
+            -45% d'énergie
+          </span>
+                        </div>
+                    </div>
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white border border-gray-100 rounded-xl p-8 shadow-sm flex flex-col h-full">
+                        <div class="flex gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="#fbbf24" stroke="#fbbf24" class="w-5 h-5">
+                                <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-[15px] leading-relaxed mb-10 flex-grow">
+                            Plateforme intuitive, professionnels compétents, et un suivi de A à Z. Ma maison est
+                            maintenant classée <strong>A en DPE</strong>. Je recommande vivement RenoFox !
+                        </p>
+                        <div class="border-t border-gray-50 pt-6 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sophie"
+                                     class="w-10 h-10 rounded-full bg-gray-100" height="50" width="auto" alt="Avatar">
+                                <div>
+                                    <p class="font-bold text-gray-900 text-sm">Sophie Bernard</p>
+                                    <p class="text-xs text-gray-500 font-medium">Propriétaire à Bordeaux</p>
+                                </div>
+                            </div>
+                            <span class="bg-[#ecfdf5] text-[#10b981] px-3 py-1.5 rounded-lg text-[11px] font-bold">
+            DPE classe A
+          </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        </style>
+
+        <script>
+            const slider = document.getElementById('testimonialSlider');
+            const next = document.getElementById('nextBtn');
+            const prev = document.getElementById('prevBtn');
+
+            // Calcule la largeur d'une carte (y compris le gap)
+            const getScrollAmount = () => {
+                const card = slider.querySelector('div');
+                return card.offsetWidth + 24; // 24 est le gap-6
+            };
+
+            next.onclick = () => slider.scrollLeft += getScrollAmount();
+            prev.onclick = () => slider.scrollLeft -= getScrollAmount();
+        </script>
+        <div>
+            <p>Ils nous font confiance</p>
+            <h3>ADEME</h3>
+            <h3>RGE</h3>
+            <h3>Qualibat</h3>
+            <h3>ANAH</h3>
+            <h3>FFB</h3>
+        </div>
+    </article>
 
     <!-- Block 6 -->
 
@@ -765,7 +1051,9 @@
             <address>
                 <!-- Adresse physique -->
                 <div class="address-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
                         <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
@@ -777,7 +1065,9 @@
 
                 <!-- Téléphone -->
                 <div class="address-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
                         <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
                     </svg>
                     <p>
@@ -789,7 +1079,9 @@
 
                 <!-- Email -->
                 <div class="address-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
                         <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
                         <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                     </svg>
@@ -821,8 +1113,6 @@
     </section>
 
 </footer>
-
-
 
 </body>
 
