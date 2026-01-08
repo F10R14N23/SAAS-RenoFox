@@ -674,69 +674,69 @@
 </main>
 
 
-<!-- Bas de Page-->
+<footer class="site-footer">
 
-<!-- Pied de page principal du site -->
-<footer aria-label="Pied de page du site" role="contentinfo">
+    <!-- Section principale du footer : navigation et informations principales -->
+    <section class="footer-top" aria-label="Navigation secondaire">
 
-    <!-- Section regroupant les informations principales du footer -->
-    <section aria-label="Informations principales du footer">
+        <!-- Bloc de la marque et logos sociaux -->
+        <div class="footer-brand-section">
+            <!-- Logo de l'entreprise -->
+            <img src="Image/logo-renofox.png"
+                 alt="Logo RenoFox"
+                 height="100"
+                 width="auto"
+                 loading="lazy"> <!-- lazy loading pour optimiser le temps de chargement -->
 
-        <!-- Bloc identité de la marque et réseaux sociaux -->
-        <div>
-            <!-- Logo de l’entreprise -->
-            <img src="Image/logo-renofox.png" alt="Logo RenoFox" height="100" width="auto">
-
-            <!-- Navigation dédiée aux réseaux sociaux -->
+            <!-- Navigation vers les réseaux sociaux -->
             <nav aria-label="Réseaux sociaux">
                 <ul>
-                    <!-- Lien Instagram -->
+                    <!-- Instagram -->
                     <li>
                         <a href="https://www.linkedin.com/in/renofox-545a51395/"
-                           aria-label="Lien LinkedIn"
+                           aria-label="Rejoignez-nous sur LinkedIn"
                            target="_blank"
-                           rel="noopener noreferrer">
-                            <img src="Image/Instagram.png" alt="Logo Instagram" height="50" wight="auto">
+                           rel="noopener noreferrer"> <!-- sécurité et performance pour les liens externes -->
+                            <img src="Image/Instagram.png" alt="Logo Instagram" height="50" width="auto" loading="lazy">
                         </a>
                     </li>
 
-                    <!-- Lien LinkedIn -->
+                    <!-- LinkedIn -->
                     <li>
                         <a href="https://www.linkedin.com/in/renofox-545a51395/"
-                           aria-label="Lien LinkedIn"
+                           aria-label="Suivez-nous sur LinkedIn"
                            target="_blank"
                            rel="noopener noreferrer">
-                            <img src="Image/Linkedin.webp" alt="Logo Linkedin" height="50" wight="auto">
+                            <img src="Image/Linkedin.webp" alt="Logo Linkedin" height="50" width="auto" loading="lazy">
                         </a>
                     </li>
 
-                    <!-- Lien X -->
+                    <!-- X / Twitter -->
                     <li>
                         <a href="https://www.linkedin.com/in/renofox-545a51395/"
-                           aria-label="Lien LinkedIn"
+                           aria-label="Suivez-nous sur X (Twitter)"
                            target="_blank"
                            rel="noopener noreferrer">
-                            <img src="Image/X.png" alt="Logo X" height="45" wight="auto">
+                            <img src="Image/X.png" alt="Logo X" height="45" width="auto" loading="lazy">
                         </a>
                     </li>
 
-                    <!-- Lien Facebook -->
+                    <!-- Facebook -->
                     <li>
                         <a href="https://www.linkedin.com/in/renofox-545a51395/"
-                           aria-label="Lien LinkedIn"
+                           aria-label="Suivez-nous sur Facebook"
                            target="_blank"
                            rel="noopener noreferrer">
-                            <img src="Image/Facebook.png" alt="Logo Facebook" height="45" width="auto">
+                            <img src="Image/Facebook.png" alt="Logo Facebook" height="45" width="auto" loading="lazy">
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
 
-        <!-- Bloc Services -->
-        <div>
-            <!-- Titre associé à la liste via aria-labelledby -->
-            <h2 id="services-title">Services</h2>
+        <!-- Bloc de navigation "Services" -->
+        <div class="footer-nav-column">
+            <h3 id="services-title">Services</h3>
             <ul aria-labelledby="services-title">
                 <li><a href="#">Trouver un professionnel</a></li>
                 <li><a href="#">Calculateur d'aides</a></li>
@@ -746,9 +746,9 @@
             </ul>
         </div>
 
-        <!-- Bloc Ressources -->
-        <div>
-            <h2 id="ressources-title">Ressources</h2>
+        <!-- Bloc de navigation "Ressources" -->
+        <div class="footer-nav-column">
+            <h3 id="ressources-title">Ressources</h3>
             <ul aria-labelledby="ressources-title">
                 <li><a href="#">Guide de rénovation</a></li>
                 <li><a href="#">Aides de l'État</a></li>
@@ -758,74 +758,43 @@
             </ul>
         </div>
 
-        <!-- Bloc Contact -->
-        <div>
-            <h2 id="contact-title">Contact</h2>
+        <!-- Bloc de contact -->
+        <div class="footer-contact-column">
+            <h3 id="contact-title">Contact</h3>
 
-            <!-- Balise address utilisée pour les informations de contact officielles -->
-            <address aria-labelledby="contact-title">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24"
-                         height="24"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
-                        <path d="M20 10c0 4.993-5.539 10.193-7.399
-                    11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993
-                    4 10a8 8 0 0 1 16 0"></path>
+            <address>
+                <!-- Adresse physique -->
+                <div class="address-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
+                    <p>
+                        15 Rue de la Transition<br>
+                        75001 Paris, France
+                    </p>
                 </div>
-                <p>
-                    15 Rue de la Transition<br>
-                    75001 Paris, France
-                </p>
 
-                <!-- Lien cliquable pour appel téléphonique -->
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24"
-                         height="24"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
-                        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17
-                        15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2
-                        2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                <!-- Téléphone -->
+                <div class="address-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
                     </svg>
                     <p>
-                        <a href="tel:+33604048717" aria-label="Numéro de téléphone">
+                        <a href="tel:+33604048717" aria-label="Nous appeler au +33 06 04 04 87 17">
                             +33 06 04 04 87 17
                         </a>
                     </p>
                 </div>
-                <!-- Lien cliquable pour contact par email -->
-                <div>
+
+                <!-- Email -->
+                <div class="address-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    </svg>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="24"
-                             height="24"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             stroke-linecap="round"
-                             stroke-linejoin="round"
-                             aria-hidden="true">
-                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                        </svg>
-                        <a href="mailto:contact.renofox@gmail.com"
-                           aria-label="Adresse email de contact">
+                        <a href="mailto:contact.renofox@gmail.com">
                             contact.renofox@gmail.com
                         </a>
                     </p>
@@ -834,40 +803,25 @@
         </div>
     </section>
 
-    <!-- Séparateur visuel entre contenu principal et informations légales -->
-    <!-- aria-hidden empêche la lecture par les technologies d’assistance -->
-    <div class="footer-separator" aria-hidden="true"></div>
+    <!-- Séparateur visuel entre top et bottom footer -->
+    <hr class="footer-divider" aria-hidden="true">
 
-    <!-- Section dédiée aux mentions légales et droits -->
-    <section aria-label="Informations légales">
-        <!-- Mention des droits d’auteur -->
-        <p><small>© 2025 RenoFox. Tous droits réservés.</small></p>
+    <!-- Section inférieure : informations légales -->
+    <section class="footer-bottom" aria-label="Informations légales">
+        <p><small>&copy; 2025 RenoFox. Tous droits réservés.</small></p>
 
-        <!-- Navigation liens légaux -->
-        <nav aria-label="Liens légaux">
+        <!-- Liens juridiques -->
+        <nav aria-label="Liens juridiques">
             <ul>
-                <li>
-                    <a href="Mentions_legales.html" aria-label="Mentions légales">
-                        Mentions légales
-                    </a>
-                </li>
-                <li>
-                    <a href="Politique_confidentialité.html"
-                       aria-label="Politique de confidentialité">
-                        Politique de confidentialité
-                    </a>
-                </li>
-                <li>
-                    <a href="CGU.html"
-                       aria-label="Conditions générales d'utilisation">
-                        CGU
-                    </a>
-                </li>
+                <li><a href="Mentions_legales.html">Mentions légales</a></li>
+                <li><a href="Politique_confidentialité.html">Politique de confidentialité</a></li>
+                <li><a href="CGU.html">CGU</a></li>
             </ul>
         </nav>
     </section>
 
 </footer>
+
 
 
 </body>
