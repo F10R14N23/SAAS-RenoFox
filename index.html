@@ -8,7 +8,8 @@
     <!-- CHARSET & VIEWPORT : définir l'encodage et le comportement responsive -->
     <!-- ============================================================= -->
     <meta charset="UTF-8"> <!-- Encodage UTF-8 pour supporter tous les caractères -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive : largeur = device, zoom initial = 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive : largeur = device, zoom initial = 1 -->
 
     <!-- ============================================================= -->
     <!-- THEME & COLOR SCHEME : personnalisation couleur barre navigateur & dark/light mode -->
@@ -197,30 +198,65 @@
 </head>
 
 
-
 <body>
-<header aria-label="Navigation principale du site RenoFox" role="banner">
-    <section>
-        <div>
-            <a href="#Footer">
-                <img src="Image/logo-renofox.png" alt="Logo RenoFox" height="100" width="auto">
-            </a>
-        </div>
-        <nav aria-label="Navigation du site">
-            <ul>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Aides-d'Etat">Aides d'État</a></li>
-                <li><a href="#Impact-Ecologique">Impact écologique</a></li>
-                <li><a href="#Témoignages">Témoignages</a></li>
-            </ul>
-        </nav>
-        <nav aria-label="Espace utilisateur">
-            <a href="Connexion.html" target="_blank" rel="noopener noreferrer">Connexion</a>
-            <a href="Choice1.html" target="_blank" rel="noopener noreferrer">Démarrer</a>
-        </nav>
+<!-- En-tête principal du site -->
+<header aria-label="En-tête principal du site RenoFox">
 
-    </section>
+    <!-- Logo du site : renvoie toujours vers la page d'accueil -->
+    <a href="index.html" aria-label="Retour à l'accueil RenoFox">
+        <img
+                src="Image/logo-renofox.webp"
+                alt="RenoFox – Expert en rénovation énergétique"
+        >
+    </a>
+
+    <!-- Navigation principale du site -->
+    <!-- Contient les liens vers les sections clés de la page -->
+    <nav aria-label="Navigation principale">
+        <ul>
+            <li>
+                <a href="#services">
+                    Services
+                </a>
+            </li>
+            <li>
+                <a href="#aides-etat">
+                    Aides d’État
+                </a>
+            </li>
+            <li>
+                <a href="#impact-ecologique">
+                    Impact écologique
+                </a>
+            </li>
+            <li>
+                <a href="#temoignages">
+                    Témoignages
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Navigation secondaire dédiée à l'espace utilisateur -->
+    <!-- Séparée pour des raisons d'accessibilité et de clarté UX -->
+    <nav aria-label="Espace utilisateur">
+        <ul>
+            <li>
+                <a href="connexion.html">
+                    Connexion
+                </a>
+            </li>
+            <li>
+                <!-- Lien d'action principal (Call To Action) -->
+                <a href="choice1.html" class="cta">
+                    Démarrer
+                </a>
+            </li>
+        </ul>
+    </nav>
+
 </header>
+
 
 
 <main>
